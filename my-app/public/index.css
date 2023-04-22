@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --primary-color-100: rgb(185, 237, 221);
+  --primary-color-200: rgb(135, 203, 185);
+  --primary-color-300: rgb(86, 157, 170);
+  --primary-color-400: rgb(87, 125, 134);
+
+  --gray-color-100: rgb(236, 236, 248);
+  --gray-color-200: rgb(168, 168, 180);
+  --gray-color-300: rgb(127, 127, 132);
+  --gray-trans-color-400: rgba(79, 79, 82, 0.752);
+  --gray-color-500: rgb(40, 40, 44);
+}
+
+body {
+  background-color: var(--gray-color-200);
+  background-image: url(./cross-scratches.png);
+  margin: 0;
+  padding: 0;
+  /* background-color: var(--gray-color-200); */
+  font-size: larger;
+}
+
+#root {
+  /* max-width: 80%; */
+  margin: 0 auto;
+  padding: 0;
+  color: black;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 5rem;
+  background-color: var(--primary-color-300);
+  box-shadow: 0 2px 0.7rem rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+#addNotes {
+  position: relative;
+  text-align: center;
+  /* display: flex; */
+  /* flex-direction: column; */
+  margin: 1rem 0 3rem 0;
+}
+
+.addInput {
+  margin: 0 auto;
+  border: 0;
+  padding: 1rem;
+  outline: none;
+  width: 80%;
+}
+
+.addTitleInput {
+  border-radius: 8px 8px 0 0;
+}
+
+.addContentInput {
+  resize: none;
+  border-radius: 0 0 8px 8px;
+}
+
+#addNotes button {
+  background-color: var(--gray-trans-color-400);
+  color: var(--primary-color-100);
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  right: 12%;
+  bottom: -15%;
+
+  /* margin: -1.5rem auto; */
+  border: 0;
+  border-radius: 7.5rem;
+}
+
+.notes {
+  margin: 1rem auto;
+  padding: 0.5rem 1rem 1rem 1rem;
+  width: 70%;
+  background-color: var(--primary-color-100);
+  color: black;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  word-wrap: break-word;
+}
+
+.notes h1,
+.notes p {
+  margin: 0;
+  padding: 0;
+}
+
+.notesBtnContainer {
+  display: flex;
+  justify-content: right;
+}
+
+.notesBtn {
+  margin-left: 0.6rem;
+  margin-top: 1rem;
+  padding: 0.1rem 0.4rem;
+  color: black;
+  background-color: var(--primary-color-200);
+  border: 0;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+}
+
+footer {
+  position: initial;
+  bottom: 0;
+  margin: 1rem auto;
+  text-align: center;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.18);
+}
+
+@media (min-width: 48rem) {
+  #root {
+    max-width: 80%;
+  }
+
+  header {
+    border-radius: 0 0 8px 8px;
+  }
+
+  .notes {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    width: 70%;
+    background-color: var(--primary-color-100);
+    color: black;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  }
+
+  footer {
+    width: 80%;
+  }
+}
